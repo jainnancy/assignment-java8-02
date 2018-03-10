@@ -16,7 +16,13 @@ public class Driver {
     protected Driver() {
 
     }
-    public static void main(String[] args) throws Exception {
+
+    /**
+     *
+     * @param args stringargs
+     * @throws Exception exception
+     */
+    public static void main(final String[] args) throws Exception {
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter Hashtag: #");

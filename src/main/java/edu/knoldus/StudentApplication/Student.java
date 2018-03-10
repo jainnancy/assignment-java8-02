@@ -8,21 +8,30 @@ import java.util.Optional;
  */
 public class Student {
 
+    /**
+     * Student name.
+     */
     private String name;
+    /**
+     * Student roll number.
+     */
     private int rollNumber;
+    /**
+     * Subject list of student.
+     */
     private Optional<List<String>> subjectList;
 
     /**
      *
-     * @param name name
-     * @param rollNumber roll number
-     * @param subjectList subject list
+     * @param stuentName name
+     * @param studentRollNumber roll number
+     * @param studentSubjectList subject list
      */
-    Student(final String name, final int rollNumber,
-            final Optional<List<String>> subjectList) {
-        this.name = name;
-        this.rollNumber = rollNumber;
-        this.subjectList = subjectList;
+    Student(final String stuentName, final int studentRollNumber,
+            final Optional<List<String>> studentSubjectList) {
+        this.name = stuentName;
+        this.rollNumber = studentRollNumber;
+        this.subjectList = studentSubjectList;
     }
 
     /**

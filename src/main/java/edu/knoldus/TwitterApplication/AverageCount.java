@@ -11,14 +11,20 @@ import java.util.concurrent.CompletableFuture;
 public class AverageCount {
 
     /**
+     * totaldays.
+     */
+    private final Integer totaldays = 10;
+
+    /**
      *
      * @param totalTweets total tweets
      * @return average tweets
      */
-    public final CompletableFuture<Float> showAverageTweets(final Float totalTweets) {
+    public final CompletableFuture<Float>
+    showAverageTweets(final Float totalTweets) {
 
         return CompletableFuture.supplyAsync(() -> {
-            return totalTweets / 10;
+            return totalTweets / totaldays;
         });
     }
 
@@ -27,11 +33,12 @@ public class AverageCount {
      * @param tweets tweet list
      * @return average likes
      */
-    public final CompletableFuture<Float> showAverageLikes(final List<Status> tweets) {
+    public final CompletableFuture<Float>
+    showAverageLikes(final List<Status> tweets) {
 
         return CompletableFuture.supplyAsync(() -> {
             float totalLikes = new TweetCount().showLikeCount(tweets);
-            return totalLikes / 10;
+            return totalLikes / totaldays;
         });
     }
 
@@ -40,11 +47,12 @@ public class AverageCount {
      * @param tweets tweet list
      * @return average retweets
      */
-    public final CompletableFuture<Float> showAverageRetweets(final List<Status> tweets) {
+    public final CompletableFuture<Float>
+    showAverageRetweets(final List<Status> tweets) {
 
         return CompletableFuture.supplyAsync(() -> {
             float totalRetweets = new TweetCount().showRetweetCount(tweets);
-            return totalRetweets / 10;
+            return totalRetweets / totaldays;
         });
     }
 }
