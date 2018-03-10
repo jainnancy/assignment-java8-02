@@ -8,12 +8,23 @@ import java.util.Optional;
  */
 public class Classroom {
 
+    /**
+     * class room id.
+     */
     private String roomId;
+    /**
+     * Student list of room.
+     */
     private Optional<List<Student>> studentList;
 
-    Classroom(final String roomId, final Optional<List<Student>> studentList) {
-        this.roomId = roomId;
-        this.studentList = studentList;
+    /**
+     * Classromm class constructor.
+     * @param roomid room id
+     * @param studentlist student list
+     */
+    Classroom(final String roomid, final Optional<List<Student>> studentlist) {
+        this.roomId = roomid;
+        this.studentList = studentlist;
     }
 
     /**

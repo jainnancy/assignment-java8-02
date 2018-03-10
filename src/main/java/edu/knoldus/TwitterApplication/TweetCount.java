@@ -15,7 +15,8 @@ public class TweetCount {
      * @param tweets tweetlist
      * @return tweet size
      */
-    public final CompletableFuture<Integer> getTweetCount(final List<Status> tweets) {
+    public final CompletableFuture<Integer>
+    getTweetCount(final List<Status> tweets) {
         return CompletableFuture.supplyAsync(() -> {
                     return tweets.size();
                 }

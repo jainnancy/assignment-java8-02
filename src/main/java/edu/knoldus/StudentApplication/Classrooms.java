@@ -7,11 +7,18 @@ import java.util.Optional;
  * Classrooms class contains list of classroom.
  */
 public class Classrooms {
+    /**
+     * classroom list.
+     */
     private Optional<List<Classroom>> classroomList;
 
-    Classrooms(final Optional<List<Classroom>> classroomList) {
+    /**
+     * Classrooms constructor.
+     * @param classroomsList classroom list
+     */
+    Classrooms(final Optional<List<Classroom>> classroomsList) {
 
-        this.classroomList = classroomList;
+        this.classroomList = classroomsList;
     }
 
     /**
